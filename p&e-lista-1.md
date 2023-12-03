@@ -57,7 +57,7 @@ grid(col = "gray", lty = "dotted")
 
 ![coisa](attachment/039edef0fb3d881eedb3bc823e0f5432.png)
 
-![coisa](attachment/.png)
+![coisa](attachment/dda6142cf2ff8e08a58254e739ca4fb7.png)
 
 A coluna MPG representa uma medida de eficiência energética dos carros, milhas por galão, ou de forma equivalente no SI, km/L. Quanto maior é esse valor, menos combustível ele consome.
 
@@ -84,7 +84,7 @@ bp = boxplot(plot_data, col=c("lightblue", "lightgreen"),
 grid(col = "gray", lty = "dotted")
 ```
 
-![coisa](attachment/.png)
+![coisa](attachment/bbd2646a364b8644ec8984ccabbc2b28.png)
 
 ## Questão C
 
@@ -137,7 +137,7 @@ grid(col = "gray", lty = "dotted")
 [18.9,22.9) 8  31 0.26 0.40 4.0000    0.0645
 ```
 
-![coisa](attachment/.png)
+![coisa](attachment/94fa27b3f39056d170da237f9aa17878.png)
 
 A variável observada representa a quantidade de segundos que um veículo demora para percorrer 1/4 de milha (qsec). A partir do histograma e da tabela de frequências, é possível dizer que a dentro há uma maior concentração de amostras nos intervalos \[16.89, 17.71) e \[17.71, 18.90). Ou seja, os valores observados nesse quartil são mais parecidos. Quanto aos demais, observa-se uma maior dispersão, especialmente nos carros mais lentos.
 
@@ -189,7 +189,7 @@ print(hp_fq)
 [300,350) 1  32 0.03 0.22 50    0.0006
 ```
 
-![coisa](attachment/.png)
+![coisa](attachment/822c85890df35e2bfe20beb964bc7b94.png)
 
 ## Questão E
 
@@ -235,9 +235,9 @@ x            Em forma de V Reto  Sum
 
 Na presente análise, buscou-se relacionar duas variáveis qualitativas, o tipo de marcha e o tipo de motor. A partir das tabelas de frequência, foi possível perceber que a maior parte dos veículos observados possui câmbio automático e tem motor em forma de V, com 38% do total. Já o câmbio manual  com motor em forma de V foi o menos observado, com 19% do total.
 
-![coisa](attachment/.png)
+![coisa](attachment/a086c8c34762e3967dcd4622cedfcf25.png)
 
-![coisa](attachment/.png)
+![coisa](attachment/75d89e133e132d8b2f26934ad1a04396.png)
 
 A partir dos gráficos, percebe-se que em carros automáticos é mais comum o motor em V. Já nos manuais, é mais comum o motor reto, mas por uma menor margem. Observando na outra ordem, verifica-se que em motores do tipo reto, foram iguais os tipos de câmbio observados. No entanto, em relação ao motor em forma de V, o câmbio automático é muito mais comum.
 
@@ -275,7 +275,7 @@ marcha       [14.5,16.9) [16.9,17.7) [17.7,18.9) [18.9,22.9)
   Manual               5           2           3           3
 ```
 
-![coisa](attachment/.png)
+![coisa](attachment/9e1539f0a738e540a75815adfedcaad1.png)
 
 Ao avaliar as variáveis tipo de câmbio e qsec juntas, percebe-se que em um teste de velocidade em uma pista de 1/4 de milha, carros com câmbio manual mais comumente obtêm os melhores tempos. Entretanto, na faixa superior, \[16.9, 17.7), observa-se que os carros automáticos se saem melhor. Isso pode mostrar que o uso do câmbio automático, apesar de ainda obter resultados impressionantes, pode representar uma perda de desempenho se comparado à troca de marchas manual, nessa situação.
 
@@ -320,7 +320,7 @@ mpg_cut       [1.51,2.58) [2.58,3.33) [3.33,3.61) [3.61,5.42)
 R = -0.8676594
 ```
 
-![coisa](attachment/.png)
+![coisa](attachment/db11a188731b5da38b42deb50dd93436.png)
 
 Por meio da análise, vemos que o peso dos veículos e a sua eficiência energética são variáveis inversamente proporcionais, como evidenciado pelo valor do coeficiente de correlação (R) igual a -0.8677. O valor próximo a -1 revela que há uma correlação. Já o fato de ser negativo mostra que são inversamente proporcionais.
 
