@@ -1,6 +1,7 @@
 # Lista 1
 
 Data: 2023-12-03 15:58
+Last Modified: `=dateformat(this.file.mtime, "yyyy-MM-dd - HH:mm")`
 
 ---
 
@@ -54,9 +55,9 @@ grid(col = "gray", lty = "dotted")
 7            Q3 22.800000
 ```
 
-![[Pasted image 20231203160356.png|500]]
+![coisa](attachment/039edef0fb3d881eedb3bc823e0f5432.png)
 
-![[Pasted image 20231203160411.png|500]]
+![coisa](attachment/.png)
 
 A coluna MPG representa uma medida de eficiência energética dos carros, milhas por galão, ou de forma equivalente no SI, km/L. Quanto maior é esse valor, menos combustível ele consome.
 
@@ -66,7 +67,7 @@ A partir do gráfico boxplot, podemos ver com clareza que alguns carros possuem 
 
 ## Questão B
 
-> [!NOTE] Texto da Questão
+> [!NOTE]
 > Gerar um gráfico boxplot com as colunas disp e hp.
 
 ```r
@@ -83,11 +84,11 @@ bp = boxplot(plot_data, col=c("lightblue", "lightgreen"),
 grid(col = "gray", lty = "dotted")
 ```
 
-![[Pasted image 20231203160815.png|500]]
+![coisa](attachment/.png)
 
 ## Questão C
 
-> [!NOTE] Texto da Questão
+> [!NOTE]
 > Com a coluna qsec, agrupe os dados em seus respectivos quartis, construir tabela com as frequências absolutas e relativas e suas respectivas acumuladas. Gerar o histograma e comentar o resultado obtido.
 
 ```r
@@ -136,13 +137,13 @@ grid(col = "gray", lty = "dotted")
 [18.9,22.9) 8  31 0.26 0.40 4.0000    0.0645
 ```
 
-![[Pasted image 20231203161049.png|500]]
+![coisa](attachment/.png)
 
 A variável observada representa a quantidade de segundos que um veículo demora para percorrer 1/4 de milha (qsec). A partir do histograma e da tabela de frequências, é possível dizer que a dentro há uma maior concentração de amostras nos intervalos \[16.89, 17.71) e \[17.71, 18.90). Ou seja, os valores observados nesse quartil são mais parecidos. Quanto aos demais, observa-se uma maior dispersão, especialmente nos carros mais lentos.
 
 ## Questão D
 
-> [!NOTE] Texto da Questão
+> [!NOTE]
 > Com a coluna hp, gerar um histograma, e elaborar uma tabela de frequência usando as classes sugeridas pelo histograma.
 
 ```R
@@ -188,11 +189,11 @@ print(hp_fq)
 [300,350) 1  32 0.03 0.22 50    0.0006
 ```
 
-![[Pasted image 20231203161719.png|500]]
+![coisa](attachment/.png)
 
 ## Questão E
 
-> [!NOTE] Texto da Questão
+> [!NOTE]
 > Com as colunas motor e marcha gerar a matriz com as respectivas frequências, gerar os gráficos de barras motor x marcha e marcha x motor e interpretar os resultados.
 
 ```R
@@ -234,15 +235,15 @@ x            Em forma de V Reto  Sum
 
 Na presente análise, buscou-se relacionar duas variáveis qualitativas, o tipo de marcha e o tipo de motor. A partir das tabelas de frequência, foi possível perceber que a maior parte dos veículos observados possui câmbio automático e tem motor em forma de V, com 38% do total. Já o câmbio manual  com motor em forma de V foi o menos observado, com 19% do total.
 
-![[Pasted image 20231203161942.png|500]]
+![coisa](attachment/.png)
 
-![[Pasted image 20231203161951.png|500]]
+![coisa](attachment/.png)
 
 A partir dos gráficos, percebe-se que em carros automáticos é mais comum o motor em V. Já nos manuais, é mais comum o motor reto, mas por uma menor margem. Observando na outra ordem, verifica-se que em motores do tipo reto, foram iguais os tipos de câmbio observados. No entanto, em relação ao motor em forma de V, o câmbio automático é muito mais comum.
 
 ## Questão F
 
-> [!NOTE] Texto da Questão
+> [!NOTE]
 > Escolher duas variáveis (colunas), sendo uma qualitativa e outra quantitativa, gerar gráficos de barras e interpretar os resultados.
 
 ```R
@@ -274,13 +275,13 @@ marcha       [14.5,16.9) [16.9,17.7) [17.7,18.9) [18.9,22.9)
   Manual               5           2           3           3
 ```
 
-![[Pasted image 20231203162111.png|500]]
+![coisa](attachment/.png)
 
 Ao avaliar as variáveis tipo de câmbio e qsec juntas, percebe-se que em um teste de velocidade em uma pista de 1/4 de milha, carros com câmbio manual mais comumente obtêm os melhores tempos. Entretanto, na faixa superior, \[16.9, 17.7), observa-se que os carros automáticos se saem melhor. Isso pode mostrar que o uso do câmbio automático, apesar de ainda obter resultados impressionantes, pode representar uma perda de desempenho se comparado à troca de marchas manual, nessa situação.
 
 ## Questão G
 
-> [!NOTE] Texto da Questão
+> [!NOTE]
 > Escolher duas variáveis (colunas) quantitativas, calcular o coeficiente de correlação, gerar gráfico de dispersão, agrupar usando os quartis e interpretar os resultados.
 
 ```R
@@ -319,13 +320,13 @@ mpg_cut       [1.51,2.58) [2.58,3.33) [3.33,3.61) [3.61,5.42)
 R = -0.8676594
 ```
 
-![[Pasted image 20231203162435.png|500]]
+![coisa](attachment/.png)
 
 Por meio da análise, vemos que o peso dos veículos e a sua eficiência energética são variáveis inversamente proporcionais, como evidenciado pelo valor do coeficiente de correlação (R) igual a -0.8677. O valor próximo a -1 revela que há uma correlação. Já o fato de ser negativo mostra que são inversamente proporcionais.
 
 ## Questão H
 
-> [!NOTE] Texto da Questão
+> [!NOTE]
 > Calcular e mostrar a Matriz de Correlação entre todas as variáveis numéricas, e explicar algumas correlações.
 
 ```R
