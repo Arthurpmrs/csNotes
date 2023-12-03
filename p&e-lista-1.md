@@ -6,7 +6,7 @@ Data: 2023-12-03 15:58
 
 ## Questão A
 
-> [!NOTE] Texto da Questão
+> [!NOTE]
 > Com a coluna mpg que consta na base, calcular: mínimo e o máximo valor, média, mediana, desvio padrão, os quartis, construir o histograma e o boxplot e interpretar os resultados.
 
 ```R
