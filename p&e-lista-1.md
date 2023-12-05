@@ -94,7 +94,8 @@ grid(col = "gray", lty = "dotted")
 ```r
 # Retorna tabela de frequência com amplitude e densidade. Requer classes.
 get_freq_table = function(df, classes, labels) {
-  freq = table(cut(df, breaks=classes, labels=labels, right=FALSE))
+  freq = table(cut(df, breaks=classes, labels=labels, right=TRUE,
+               include.lowest = TRUE))
   freq_ac = cumsum(freq)
   freq_rel = prop.table(freq)
   freq_rel_rounded = round(freq_rel, digits=2)
@@ -257,11 +258,11 @@ marcha = data$marcha
 
 # Gerar as classes da variável quantitativa
 qsec_classes = quantile(qsec)
-qsec_cut = cut(qsec, breaks=qsec_classes, right=FALSE)
+qsec_cut = cut(qsec, breaks=qsec_classes, right=TRUE, include.lowest = TRUE)
 
 # Gerar matrix de frequências
 matrix = table(marcha, qsec_cut)
-print(matrix)
+print(addmargins(matrix))
 
 # Gerar gráfico de barras
 bp = barplot(matrix, col=c("azure", "darkslategray1"), beside=TRUE, legend=TRUE,
@@ -270,9 +271,10 @@ grid(col = "gray", lty = "dotted")
 
 # Result
             qsec_cut
-marcha       [14.5,16.9) [16.9,17.7) [17.7,18.9) [18.9,22.9)
-  Automatico           3           6           4           5
-  Manual               5           2           3           3
+marcha       [14.5,16.9) [16.9,17.7) [17.7,18.9) [18.9,22.9] Sum
+  Automatico           3           6           4           6  19
+  Manual               5           2           3           3  13
+  Sum                  8           8           7           9  32
 ```
 
 ![coisa](attachment/9e1539f0a738e540a75815adfedcaad1.png)
@@ -293,11 +295,11 @@ mpg = data$mpg
 wt = data$wt
 
 # Separação nos Quartis
-mpg_cut = cut(mpg, breaks=quantile(mpg), right=FALSE)
-wt_cut = cut(wt, breaks=quantile(wt), right=FALSE)
+mpg_cut = cut(mpg, breaks=quantile(mpg), right=TRUE, include.lowest = TRUE)
+wt_cut = cut(wt, breaks=quantile(wt), right=TRUE, include.lowest = TRUE)
 
 matrix = table(mpg_cut, wt_cut)
-print(matrix)
+print(addmargins(matrix))
 
 # Correlação
 R = cor(mpg, wt)
@@ -309,13 +311,15 @@ plot(mpg, wt,
 
 abline(lsfit(mpg, wt), col="darkorchid")
 
+
 # Result
              wt_cut
-mpg_cut       [1.51,2.58) [2.58,3.33) [3.33,3.61) [3.61,5.42)
-  [10.4,15.4)           0           0           3           4
-  [15.4,19.2)           0           1           4           2
-  [19.2,22.8)           1           5           1           1
-  [22.8,33.9)           6           2           0           0
+mpg_cut       [1.51,2.58] (2.58,3.33] (3.33,3.61] (3.61,5.42] Sum
+  [10.4,15.4]           0           0           3           5   8
+  (15.4,19.2]           0           1           5           3   9
+  (19.2,22.8]           2           6           0           0   8
+  (22.8,33.9]           6           1           0           0   7
+  Sum                   8           8           8           8  32
 
 R = -0.8676594
 ```
