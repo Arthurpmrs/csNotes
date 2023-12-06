@@ -17,22 +17,20 @@ setwd("/home/arthurpmrs/ufal/cc/materias/periodo_3/estatistica/exercicios")
 data = read.csv("ENEM22.csv", sep=";", header=TRUE, dec=".")
 notas = data$NU_NOTA_ENEM
 
-
-# medidas descritivas (ou tendência central)
+# a) medidas descritivas (ou tendência central)
 descritivas = data.frame(
   Propriedades = c("Max", "Min", "Média", "Mediana", "Q1", "Q3", "Moda"),
-  Valores = round(c(max(notas),
-                    min(notas),
-                    mean(notas),
-                    median(notas),
-                    quantile(notas, 0.25),
-                    quantile(notas, 0.75),
-                    get_mode(notas)),
-                  2)
+  Valores = c(round(max(notas), 2),
+              round(min(notas), 2),
+              round(mean(notas), 2),
+              round(median(notas), 2),
+              round(quantile(notas, 0.25), 2),
+              round(quantile(notas, 0.75), 2),
+              paste(get_mode(notas), collapse = ', '))
 )
 print(descritivas)
 
-# medidas de dispersão (ou variabilidade)
+# b) medidas de dispersão (ou variabilidade)
 dispersao = data.frame(
   Propriedades = c("Amplitude", "Variância", "Desvio Padrão", "CV"),
   Valores = round(c(max(notas) - min(notas),
