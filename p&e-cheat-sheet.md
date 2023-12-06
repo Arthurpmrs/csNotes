@@ -9,11 +9,28 @@
 get_mode = function(df) {
   freq = table(df)
   result = as.numeric(names(freq[freq == max(freq)]))
+  str(result)
   return (result)
 }
 
+# Verificar a assimetria
+get_assimetria = function(x) {
+  md = median(x)
+  media = mean(x)
+
+  ap2 = (media - md) / sd(x)
+
+  if (ap2 == 0) {
+    return ("ap2 = 0: simetrico")
+  } else if (ap2 > 0) {
+    return ("ap2 > 0: assimetria a direita (positivo)")
+  } else {
+    return ("ap2 < 0: assimetria a esquerda (negativo)")
+  }
+}
+
 # Ler e separar os dados
-setwd("/home/arthurpmrs/ufal/cc/materias/periodo_3/estatistica/exercicios")
+setwd("/home/arthurpmrs/ufal/cc/materias/periodo_3/estatistica/provas/ab1")
 data = read.csv("ENEM22.csv", sep=";", header=TRUE, dec=".")
 notas = data$NU_NOTA_ENEM
 
@@ -46,6 +63,10 @@ h = hist(notas, breaks=c(300, 400, 500, 600, 700, 800), labels=TRUE,
          col="aliceblue", main="Notas Enem 2022 - Alagoas",
          xlim=c(300, 800), ylim=c(0, 600))
 grid(col = "gray", lty = "dotted")
+
+# Assimetria
+print(get_assimetria(notas))
+
 
 # Result
   Propriedades Valores
@@ -243,3 +264,10 @@ media       0.8127   0.7808     0.7954     0.7993  0.8375 1.0000
 [Gráficos](attachment/cheat-sheet/20231205191250.png)
 
 [Gráficos](attachment/cheat-sheet/20231205191342.png)
+
+## Calcular todo tipo
+
+```R
+
+
+```
